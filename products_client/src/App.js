@@ -4,6 +4,7 @@ import ProductBox from "./components/ProductBox.js";
 import SearchBar from "./components/SearchBar.js";
 import NavBar from "./components/NavBar.js";
 import Banner from "./components/Banner.js";
+import ScreenTop from "./components/ScreenTop.js";
 import "./index.css";
 
 const baseURL = "http://localhost:3003";
@@ -78,12 +79,13 @@ export default class App extends Component {
   render() {
     return (
       <div>
+        <ScreenTop></ScreenTop>
         <Banner></Banner>
         <SearchBar></SearchBar>
         <NavBar></NavBar>
         <NewForm handleAddProduct={this.handleAddProduct} />
         <table>
-          <tbody className="ProductBox">
+          <tbody>
             {this.state.products.map((product) => {
               return (
                 <tr>
