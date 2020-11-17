@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import NewForm from "./components/NewForm.js";
-import ProductBox from "./components/ProductBox.js";
+//import ProductBox from "./components/ProductBox.js";
 import SearchBar from "./components/SearchBar.js";
 import NavBar from "./components/NavBar.js";
 import Banner from "./components/Banner.js";
 import ScreenTop from "./components/ScreenTop.js";
+import ShoppingPage from "./components/ShoppingPage"
 import "./index.css";
 
 const baseURL = "http://localhost:3003";
@@ -113,6 +114,7 @@ export default class App extends Component {
             })}
           </tbody>
         </table>
+        <ShoppingPage></ShoppingPage>
       </div>
     );
   }
