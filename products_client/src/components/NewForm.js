@@ -45,7 +45,28 @@ export default class NewForm extends Component {
           onChange={this.handleChange}
           value={this.state.name}
           placeHolder="add a Product"
-        />
+        />{" "}
+        <br />
+        <label htmlFor="name">Price</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          onChange={this.handleChange}
+          value={this.state.price}
+          placeHolder="add a Price"
+        />{" "}
+        <br />
+        <label htmlFor="name">Description</label>
+        <input
+          type="text"
+          id="description"
+          name="description"
+          onChange={this.handleChange}
+          value={this.state.description}
+          placeHolder="add a Description"
+        />{" "}
+        <br />
         <input type="submit" value="Add Product" />
       </form>
     );
