@@ -114,7 +114,7 @@ export default class App extends Component {
             })}
           </tbody>
         </table>
-        <ShoppingPage></ShoppingPage>
+        {/* <ShoppingPage></ShoppingPage> */}
       </div>
     );
   }
