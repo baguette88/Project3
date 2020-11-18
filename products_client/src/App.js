@@ -1,14 +1,10 @@
 import React, { Component } from "react";
 import NewForm from "./components/NewForm.js";
-//import ProductBox from "./components/ProductBox.js";
-
 import Header from "./components/Header.js";
 import ShoppingPage from "./components/ShoppingPage";
 import "./index.css";
-import Login from "./components/Login.js"; //LOGIN IMPORTED
 console.log("App");
 const baseURL = "http://localhost:3003";
-
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -80,7 +76,6 @@ export default class App extends Component {
     return (
       <div>
         <Header></Header>
-
         <NewForm handleAddProduct={this.handleAddProduct} />
         <table>
           <tbody>
