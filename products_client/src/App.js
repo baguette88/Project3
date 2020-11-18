@@ -7,7 +7,6 @@ import Banner from "./components/Banner.js";
 import ScreenTop from "./components/ScreenTop.js";
 import ShoppingPage from "./components/ShoppingPage"
 import "./index.css";
-import Login from "./components/Login.js"
 
 const baseURL = "http://localhost:3003";
 
@@ -82,7 +81,6 @@ export default class App extends Component {
     return (
       <div>
         <ScreenTop></ScreenTop>
-        <Login></Login>
         <Banner></Banner>
         <SearchBar></SearchBar>
         <NavBar></NavBar>
@@ -116,7 +114,7 @@ export default class App extends Component {
             })}
           </tbody>
         </table>
-        <ShoppingPage></ShoppingPage>
+        {/* <ShoppingPage></ShoppingPage> */}
       </div>
     );
   }
