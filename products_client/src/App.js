@@ -3,6 +3,7 @@ import NewForm from "./components/NewForm.js";
 import Header from "./components/Header.js";
 import ShoppingPage from "./components/ShoppingPage";
 import "./index.css";
+import ProductGrid from "./components/ProductGrid.js";
 console.log("App");
 const baseURL = "http://localhost:3003";
 export default class App extends Component {
@@ -105,6 +106,7 @@ export default class App extends Component {
           </tbody>
         </table>
         <ShoppingPage></ShoppingPage>
+        <ProductGrid />
       </div>
     );
   }
