@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import NewForm from "./components/NewForm.js";
+//import ProductBox from "./components/ProductBox.js";
+import SearchBar from "./components/SearchBar.js";
+import NavBar from "./components/NavBar.js";
+import Banner from "./components/Banner.js";
+import ScreenTop from "./components/ScreenTop.js";
+import ShoppingPage from "./components/ShoppingPage"
+import "./index.css";
 
 const baseURL = "http://localhost:3003";
 
@@ -12,7 +19,7 @@ export default class App extends Component {
 
     this.getProducts = this.getProducts.bind(this);
     this.handleAddProduct = this.handleAddProduct.bind(this);
-    this.toggleCelebrated = this.toggleCelebrated.bind(this);
+    this.toggleinStock = this.toggleinStock.bind(this);
     this.deleteProduct = this.deleteProduct.bind(this);
   }
 
@@ -38,10 +45,10 @@ export default class App extends Component {
       });
   }
 
-  toggleCelebrated(product) {
+  toggleinStock(product) {
     fetch(baseURL + "/products/" + product._id, {
       method: "PUT",
-      body: JSON.stringify({ celebrated: !product.celebrated }),
+      body: JSON.stringify({ inStock: !product.inStock }),
       headers: {
         "Content-Type": "application/json",
       },
@@ -52,7 +59,7 @@ export default class App extends Component {
         const findIndex = this.state.products.findIndex(
           (product) => product._id === resJson._id
         );
-        copyProducts[findIndex].celebrated = resJson.celebrated;
+        copyProducts[findIndex].inStock = resJson.inStock;
         this.setState({ products: copyProducts });
       });
   }
@@ -73,7 +80,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>Products!</h1>
+        <ScreenTop></ScreenTop>
+        <Banner></Banner>
+        <SearchBar></SearchBar>
+        <NavBar></NavBar>
         <NewForm handleAddProduct={this.handleAddProduct} />
         <table>
           <tbody>
@@ -82,18 +92,29 @@ export default class App extends Component {
                 <tr>
                   <td
                     key={product._id}
-                    onDoubleClick={() => this.toggleCelebrated(product)}
-                    className={product.celebrated ? "celebrated" : null}
+                    onDoubleClick={() => this.toggleinStock(product)}
+                    className={product.inStock ? "In Stock" : null}
                   >
                     {" "}
-                    {product.name}{" "}
+                    {product.name} |{product.category}|{product.subcategory}
+                    <br /> |{product.description} <br />
                   </td>
-                  <td onClick={() => this.deleteProduct(product._id)}>X</td>
+                  <td> {product.price} </td>
+                  <td> {product.inStock} </td>
+                  <button>
+                    {" "}
+                    <td onClick={() => this.deleteProduct(product._id)}>
+                      DELETE
+                    </td>{" "}
+                  </button>
                 </tr>
+
+                // <NavBar>NavBar</NavBar>
               );
             })}
           </tbody>
         </table>
+        {/* <ShoppingPage></ShoppingPage> */}
       </div>
     );
   }
