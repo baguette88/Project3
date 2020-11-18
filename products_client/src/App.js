@@ -81,9 +81,8 @@ export default class App extends Component {
         <NewForm handleAddProduct={this.handleAddProduct} />
             {this.state.products.map((product) => {
               return (
-                <div>
+                <div key={product._id}>
                   <p
-                    key={product._id}
                     onDoubleClick={() => this.toggleinStock(product)}
                     className={product.inStock ? "In Stock" : null}
                   >

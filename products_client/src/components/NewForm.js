@@ -7,6 +7,15 @@ export default class NewForm extends Component {
     super(props);
     this.state = {
       name: "",
+      price: "",
+      image: "",
+      category: "",
+      subcategory: "",
+      brand: "",
+      description: "",
+      inStock: true,
+      quantity: "",
+      tags: ""
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,6 +39,15 @@ export default class NewForm extends Component {
         this.props.handleAddProduct(data);
         this.setState({
           name: "",
+          price: "",
+          image: "",
+          category: "",
+          subcategory: "",
+          brand: "",
+          description: "",
+          inStock: true,
+          quantity: "",
+          tags: ""
         });
       });
   }
@@ -121,7 +139,7 @@ export default class NewForm extends Component {
         {/* Will need to set minimum to go no lower than 0 */}
         <label htmlFor="quantity">Quantity</label>
         <input
-          type="number"
+          type="text"
           id="quantity"
           name="quantity"
           onChange={this.handleChange}

@@ -6,7 +6,7 @@ const productSchema = mongoose.Schema({
   image: { type: String },
   category: { type: String, default: "Category!" },
   subcategory: { type: String, default: "SubCategory!" },
-  brand: { type: String, required: true },
+  brand: { type: String },
   description: { type: String, default: "Best Product ever!" },
   inStock: { type: Boolean, default: true },
   quantity: [{type: Number, default: 0, min: [0, 'Out of Stock'] }],
