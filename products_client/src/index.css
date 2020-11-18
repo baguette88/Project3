@@ -60,3 +60,6 @@ input {
   border: 1px solid black;
   height: 10px;
 }
+.input {
+  background-color: grey;
+}

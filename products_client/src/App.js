@@ -5,6 +5,7 @@ import NewForm from "./components/NewForm.js";
 import Header from "./components/Header.js";
 import ShoppingPage from "./components/ShoppingPage";
 import "./index.css";
+import Login from "./components/Login.js";
 
 const baseURL = "http://localhost:3003";
 
@@ -108,7 +109,7 @@ export default class App extends Component {
             })}
           </tbody>
         </table>
-        {/* <ShoppingPage></ShoppingPage> */}
+        <ShoppingPage></ShoppingPage>
       </div>
     );
   }
