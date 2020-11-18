@@ -5,7 +5,7 @@ import NewForm from "./components/NewForm.js";
 import Header from "./components/Header.js";
 import ShoppingPage from "./components/ShoppingPage";
 import "./index.css";
-import Login from "./components/Login.js";
+import Login from "./components/Login.js"; //LOGIN IMPORTED
 
 const baseURL = "http://localhost:3003";
 
