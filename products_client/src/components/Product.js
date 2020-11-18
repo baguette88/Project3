@@ -5,7 +5,7 @@ export default class ProductBox extends Component {
     return <div className="ProductBox">
       <h1>Product Name</h1>
 
-      <img  />
+      <img alt=''/>
       <h2> Price</h2>
       <p>Product descripton header</p>
       <p>Product description</p>
