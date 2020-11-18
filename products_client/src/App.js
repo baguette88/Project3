@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import NewForm from "./components/NewForm.js";
-//import ProductBox from "./components/ProductBox.js";
-import SearchBar from "./components/SearchBar.js";
-import NavBar from "./components/NavBar.js";
-import Banner from "./components/Banner.js";
-import ScreenTop from "./components/ScreenTop.js";
-import ShoppingPage from "./components/ShoppingPage"
+import Header from "./components/Header.js";
+import ShoppingPage from "./components/ShoppingPage";
 import "./index.css";
-
+import ProductGrid from "./components/ProductGrid.js";
+import ProductCart from "./components/ProductCart.js";
+console.log("App");
 const baseURL = "http://localhost:3003";
-
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -80,10 +77,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <ScreenTop></ScreenTop>
-        <Banner></Banner>
-        <SearchBar></SearchBar>
-        <NavBar></NavBar>
+        <Header></Header>
         <NewForm handleAddProduct={this.handleAddProduct} />
         <table>
           <tbody>
@@ -108,13 +102,13 @@ export default class App extends Component {
                     </td>{" "}
                   </button>
                 </tr>
-
-                // <NavBar>NavBar</NavBar>
               );
             })}
           </tbody>
         </table>
-        {/* <ShoppingPage></ShoppingPage> */}
+        <ShoppingPage></ShoppingPage>
+        <ProductGrid />
+        <ProductCart />
       </div>
     );
   }
