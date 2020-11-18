@@ -47,6 +47,7 @@ export default class NewForm extends Component {
           placeHolder="add a Product"
         />{" "}
         <br />
+        {/* Bug: Prices revert to default value */}
         <label htmlFor="name">Price</label>
         <input
           type="number"
