@@ -1,0 +1,414 @@
+.mediaViewInfo {
+	--web-view-name: Landing;
+	--web-view-id: Landing;
+	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Landing;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Landing {
+    margin: 0px                  auto;
+	position: absolute;
+	width: 396px;
+	height: 786px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	--web-view-name: Landing;
+	--web-view-id: Landing;
+	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+#hero-area {
+	fill: rgba(174,174,174,1);
+}
+.hero-area {
+	position: absolute;
+	overflow: visible;
+	width: 396px;
+	height: 196px;
+	left: 0px;
+	top: 172px;
+}
+#hero_promotional_area {
+	left: 115px;
+	top: 218px;
+	position: absolute;
+	overflow: visible;
+	width: 167px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(34,34,34,1);
+}
+#Product_Component_4__1 {
+	position: absolute;
+	width: 396px;
+	height: 380px;
+	left: 0px;
+	top: 373px;
+	overflow: visible;
+}
+#product-area {
+	fill: rgba(174,174,174,1);
+}
+.product-area {
+	position: absolute;
+	overflow: visible;
+	width: 396px;
+	height: 380px;
+	left: 0px;
+	top: 0px;
+}
+#product-image {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	left: 101px;
+	top: 53px;
+	overflow: visible;
+}
+#Product_Image {
+	fill: rgba(112,112,112,1);
+}
+.Product_Image {
+	position: absolute;
+	overflow: visible;
+	width: 200px;
+	height: 200px;
+	left: 0px;
+	top: 0px;
+}
+#PRODUCT_IMAGE {
+	left: 55px;
+	top: 74px;
+	position: absolute;
+	overflow: visible;
+	width: 91px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(34,34,34,1);
+}
+#product-description {
+	left: 16px;
+	top: 292px;
+	position: absolute;
+	overflow: visible;
+	width: 371px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgba(34,34,34,1);
+}
+#product-price {
+	left: 16px;
+	top: 261px;
+	position: absolute;
+	overflow: visible;
+	width: 65px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(34,34,34,1);
+}
+#product-name {
+	left: 16px;
+	top: 5px;
+	position: absolute;
+	overflow: visible;
+	width: 130px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(34,34,34,1);
+}
+#phone-viewport {
+	position: absolute;
+	width: 396px;
+	height: 786px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Rectangle_1 {
+	fill: rgba(102,102,102,1);
+}
+.Rectangle_1 {
+	position: absolute;
+	overflow: visible;
+	width: 396px;
+	height: 43px;
+	left: 0px;
+	top: 743px;
+}
+#Rectangle_2 {
+	fill: rgba(102,102,102,1);
+}
+.Rectangle_2 {
+	position: absolute;
+	overflow: visible;
+	width: 396px;
+	height: 23px;
+	left: 0px;
+	top: 0px;
+}
+#Header_Component_2__1 {
+	position: absolute;
+	width: 396px;
+	height: 144px;
+	left: 0px;
+	top: 23px;
+	overflow: visible;
+}
+#header {
+	fill: rgba(174,174,174,1);
+}
+.header {
+	position: absolute;
+	overflow: visible;
+	width: 396px;
+	height: 144px;
+	left: 0px;
+	top: 0px;
+}
+#search {
+	position: absolute;
+	width: 386px;
+	height: 40px;
+	left: 5px;
+	top: 54px;
+	overflow: visible;
+}
+#Rectangle_4 {
+	fill: rgba(112,112,112,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_4 {
+	position: absolute;
+	overflow: visible;
+	width: 386px;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+}
+#logo {
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	left: 58px;
+	top: 12px;
+	overflow: visible;
+}
+#Rectangle_5 {
+	fill: rgba(112,112,112,1);
+}
+.Rectangle_5 {
+	position: absolute;
+	overflow: visible;
+	width: 60px;
+	height: 30px;
+	left: 0px;
+	top: 0px;
+}
+#LOGO_ {
+	left: 3px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 52px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(34,34,34,1);
+}
+#search-icon {
+	left: 27px;
+	top: 67px;
+	position: absolute;
+	overflow: visible;
+	width: 15px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Font Awesome 5 Free;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(34,34,34,1);
+}
+#cart-icon {
+	left: 357px;
+	top: 16px;
+	position: absolute;
+	overflow: visible;
+	width: 26px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Font Awesome 5 Free;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	color: rgba(112,112,112,1);
+}
+#nav_bar {
+	position: absolute;
+	width: 327px;
+	height: 14px;
+	left: 35px;
+	top: 115px;
+	overflow: hidden;
+}
+#nav_bar_0 {
+	position: absolute;
+	width: 58px;
+	height: 19px;
+	left: 0px;
+	top: -3px;
+	overflow: visible;
+}
+#nav_link_1 {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 59px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(34,34,34,1);
+}
+#nav_bar_1 {
+	position: absolute;
+	width: 58px;
+	height: 19px;
+	left: 87px;
+	top: -3px;
+	overflow: visible;
+}
+#nav_link_2 {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 59px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(34,34,34,1);
+}
+#nav_bar_2 {
+	position: absolute;
+	width: 58px;
+	height: 19px;
+	left: 174px;
+	top: -3px;
+	overflow: visible;
+}
+#nav_link_3 {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 59px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(34,34,34,1);
+}
+#nav_bar_3 {
+	position: absolute;
+	width: 58px;
+	height: 19px;
+	left: 261px;
+	top: -3px;
+	overflow: visible;
+}
+#nav_link_4 {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 59px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(34,34,34,1);
+}
+#Group_5 {
+	position: absolute;
+	width: 125px;
+	height: 30px;
+	left: 136px;
+	top: 290px;
+	overflow: visible;
+}
+#product-image_bf {
+	fill: rgba(112,112,112,1);
+}
+.product-image_bf {
+	position: absolute;
+	overflow: visible;
+	width: 125px;
+	height: 30px;
+	left: 0px;
+	top: 0px;
+}
+#Buy {
+	left: 46px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 34px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
