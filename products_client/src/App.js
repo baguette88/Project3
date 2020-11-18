@@ -79,12 +79,10 @@ export default class App extends Component {
       <div>
         <Header></Header>
         <NewForm handleAddProduct={this.handleAddProduct} />
-        <table>
-          <tbody>
             {this.state.products.map((product) => {
               return (
-                <tr>
-                  <td
+                <div>
+                  <p
                     key={product._id}
                     onDoubleClick={() => this.toggleinStock(product)}
                     className={product.inStock ? "In Stock" : null}
@@ -92,20 +90,18 @@ export default class App extends Component {
                     {" "}
                     {product.name} |{product.category}|{product.subcategory}
                     <br /> |{product.description} <br />
-                  </td>
-                  <td> {product.price} </td>
-                  <td> {product.inStock} </td>
+                  </p>
+                  <p> {product.price} </p>
+                  <p> {product.inStock} </p>
                   <button>
                     {" "}
-                    <td onClick={() => this.deleteProduct(product._id)}>
+                    <p onClick={() => this.deleteProduct(product._id)}>
                       DELETE
-                    </td>{" "}
+                    </p>{" "}
                   </button>
-                </tr>
+                </div>
               );
             })}
-          </tbody>
-        </table>
         <ShoppingPage></ShoppingPage>
         <ProductGrid />
         <ProductCart />

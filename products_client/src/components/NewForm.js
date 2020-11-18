@@ -44,17 +44,17 @@ export default class NewForm extends Component {
           name="name"
           onChange={this.handleChange}
           value={this.state.name}
-          placeHolder="add Product name"
+          placeholder="add Product name"
         />{" "}
         <br />
         <label htmlFor="price">Price</label>
         <input
-          type="number"
+          type="text"
           id="price"
           name="price"
           onChange={this.handleChange}
           value={this.state.price}
-          placeHolder="add a Price"
+          placeholder="add a Price"
         />{" "}
         <br />
         <label htmlFor="image">Image Link</label>
@@ -64,7 +64,7 @@ export default class NewForm extends Component {
           name="image"
           onChange={this.handleChange}
           value={this.state.image}
-          placeHolder="add an Image Link"
+          placeholder="add an Image Link"
         />{" "}
         <br />
         <label htmlFor="category">Category</label>
@@ -74,7 +74,7 @@ export default class NewForm extends Component {
           name="category"
           onChange={this.handleChange}
           value={this.state.category}
-          placeHolder="add Product's category"
+          placeholder="add Product's category"
         />{" "}
         <br />
         <label htmlFor="subcategory">Subcategory</label>
@@ -84,7 +84,7 @@ export default class NewForm extends Component {
           name="subcategory"
           onChange={this.handleChange}
           value={this.state.subcategory}
-          placeHolder="add Product's subcategory"
+          placeholder="add Product's subcategory"
         />{" "}
         <br />
         <label htmlFor="brand">Brand</label>
@@ -94,7 +94,7 @@ export default class NewForm extends Component {
           name="brand"
           onChange={this.handleChange}
           value={this.state.brand}
-          placeHolder="add Product's brand"
+          placeholder="add Product's brand"
         />{" "}
         <br />
         <label htmlFor="description">Description</label>
@@ -104,7 +104,7 @@ export default class NewForm extends Component {
           name="description"
           onChange={this.handleChange}
           value={this.state.description}
-          placeHolder="add a Description"
+          placeholder="add a Description"
         />{" "}
         <br />
         {/* Will need to change into a checkbox */}
@@ -115,7 +115,7 @@ export default class NewForm extends Component {
           name="inStock"
           onChange={this.handleChange}
           value={this.state.inStock}
-          placeHolder="True/False"
+          placeholder="True/False"
         />{" "}
         <br />
         {/* Will need to set minimum to go no lower than 0 */}
@@ -126,7 +126,7 @@ export default class NewForm extends Component {
           name="quantity"
           onChange={this.handleChange}
           value={this.state.quantity}
-          placeHolder="---"
+          placeholder="---"
         />{" "}
         <br />
         {/* Should consider changing tags in schema type: Array; This may then cause this to need a different input type */}
@@ -137,7 +137,7 @@ export default class NewForm extends Component {
           name="tags"
           onChange={this.handleChange}
           value={this.state.tags}
-          placeHolder="Add tags when searching"
+          placeholder="Add tags when searching"
         />{" "}
         <br />
         
