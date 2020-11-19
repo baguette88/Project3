@@ -29,7 +29,18 @@ export default class NewForm extends Component {
     event.preventDefault();
     fetch(baseURL + "/products", {
       method: "POST",
-      body: JSON.stringify({ name: this.state.name }),
+      body: JSON.stringify({ 
+        name: this.state.name,
+        price: this.state.price,
+        image: this.state.image,
+        category: this.state.category,
+        subcategory: this.state.subcategory,
+        brand: this.state.brand,
+        description: this.state.description,
+        inStock: this.state.inStock,
+        quantity: this.state.quantity,
+        tags: this.state.quantity
+      }),
       headers: {
         "Content-Type": "application/json",
       },
