@@ -89,18 +89,29 @@ export default class App extends Component {
                     onDoubleClick={() => this.toggleinStock(product)}
                     className={product.inStock ? "In Stock" : null}
                   >
-                    {" "}
-                    {product.name} |{product.category}|{product.subcategory}
-                    <br /> |{product.description} <br />
-                  </td>
-                  <td> {product.price} </td>
-                  <td> {product.inStock} </td>
-                  <button>
-                    {" "}
-                    <td onClick={() => this.deleteProduct(product._id)}>
-                      DELETE
+                    <td>
+                      {" "}
+                      <b> Product: </b>
+                      {product.name}{" "}
                     </td>{" "}
-                  </button>
+                    <br />
+                    <td>
+                      Category: {product.category} | Sub-Category:{" "}
+                      {product.subcategory}{" "}
+                    </td>
+                    <br />
+                    <td>Description:{product.description}</td>
+                    {/* <td>Image:{product.image}</td> */}
+                    <br />
+                    <td> Price:{product.price} </td>
+                    {/* <td> In{product.inStock} </td> */}
+                    <button>
+                      {" "}
+                      <td onClick={() => this.deleteProduct(product._id)}>
+                        DELETE
+                      </td>{" "}
+                    </button>
+                  </td>
                 </tr>
               );
             })}
