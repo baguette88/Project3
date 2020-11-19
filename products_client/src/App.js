@@ -81,10 +81,10 @@ export default class App extends Component {
         <NewForm handleAddProduct={this.handleAddProduct} />
 
         {/* Displaying the product info */}
-        <div className="productShow">
+        <div className="inventory-show">
           {this.state.products.map((product) => {
             return (
-              <div>
+              <div className="product-show">
                 <ul key={product._id}>
                   <li><h3>Product: {product.name}</h3></li>
                   <li>Price: ${product.price} </li>
