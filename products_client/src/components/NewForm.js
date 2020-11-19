@@ -39,7 +39,7 @@ export default class NewForm extends Component {
         description: this.state.description,
         inStock: this.state.inStock,
         quantity: this.state.quantity,
-        tags: this.state.quantity
+        tags: this.state.tags
       }),
       headers: {
         "Content-Type": "application/json",
