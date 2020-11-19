@@ -14,7 +14,7 @@ products.get("/", (req, res) => {
 });
 
 // create
-products.post("/", (req, res) => {
+products.post("/", async (req, res) => {
   Product.create(req.body, (error, createdProduct) => {
     if (error) {
       res.status(400).json({ error: error.message });
