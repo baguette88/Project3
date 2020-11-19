@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>CART RENDERS</h1>
+            <div class="subtotal">
+                <p>Subtotal (# of items): $0.00</p>
+            </div>
+            <button class="checkout-btn">Checkout Emazon Cart</button>
+            <hr />
+            <div id="products-in-cart">
+                <img src="https://media.gq-magazine.co.uk/photos/5dbc4d5a8da8f900083b9076/master/w_1000,c_limit/20191028-watch-guide-baume.jpg" width="110px" class="cart-product-img" alt=""/>
+                <div class="cart-product-details">
+                    <ul>
+                        <li class="product-name">Product Name</li>
+                        <li class="product-price">$99.99</li>
+                        <li class="product-in-stock">In Stock </li>
+                        <li class="product-style">Style: </li> 
+                        <li class="product-color">Color: </li>
+                    </ul>
+                </div>
+                <div class="items-in-cart"></div>
+            </div>
+            <div class="items-in-cart">
+                <div class="cart-update">
+                    <form action="" id="cart-qty">
+                        <button class="decrease-qty-btn">Delete or Subtract Item</button> 
+                        <input id="quantity" name="quantity" type="text" class="qty-in-cart"/>
+                        <button class="increase-qty-btn">Add Item</button>
+                        <button class="delete-item-btn">Delete</button>
+                        <button class="save-item-btn">Save for Later</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
