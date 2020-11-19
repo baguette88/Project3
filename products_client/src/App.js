@@ -79,28 +79,44 @@ export default class App extends Component {
       <div>
         <Header></Header>
         <NewForm handleAddProduct={this.handleAddProduct} />
+        <table>
+          <tbody>
             {this.state.products.map((product) => {
               return (
-                <div key={product._id}>
-                  <p
+                <tr>
+                  <td
+                    key={product._id}
                     onDoubleClick={() => this.toggleinStock(product)}
                     className={product.inStock ? "In Stock" : null}
                   >
-                    {" "}
-                    {product.name} |{product.category}|{product.subcategory}
-                    <br /> |{product.description} <br />
-                  </p>
-                  <p> {product.price} </p>
-                  <p> {product.inStock} </p>
-                  <button>
-                    {" "}
-                    <p onClick={() => this.deleteProduct(product._id)}>
-                      DELETE
-                    </p>{" "}
-                  </button>
-                </div>
+                    <td>
+                      {" "}
+                      <b> Product: </b>
+                      {product.name}{" "}
+                    </td>{" "}
+                    <br />
+                    <td>
+                      Category: {product.category} | Sub-Category:{" "}
+                      {product.subcategory}{" "}
+                    </td>
+                    <br />
+                    <td>Description:{product.description}</td>
+                    {/* <td>Image:{product.image}</td> */}
+                    <br />
+                    <td> Price:{product.price} </td>
+                    {/* <td> In{product.inStock} </td> */}
+                    <button>
+                      {" "}
+                      <td onClick={() => this.deleteProduct(product._id)}>
+                        DELETE
+                      </td>{" "}
+                    </button>
+                  </td>
+                </tr>
               );
             })}
+          </tbody>
+        </table>
         <ShoppingPage></ShoppingPage>
         <ProductGrid />
         <ProductCart />

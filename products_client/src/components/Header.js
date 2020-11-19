@@ -12,7 +12,7 @@ export default class Header extends Component {
         </div>
         <div className="SearchBar">
           <form onSubmit={this.handleSubmit}>
-            <input type="text" name="search" placeholder="Search.."></input>
+            <input type="search" name="search" placeholder="Search.."></input>
             <i class="fas fa-shopping-cart"></i>
             <input type="submit" value="Search" />
           </form>
