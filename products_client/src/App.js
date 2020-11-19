@@ -102,6 +102,10 @@ export default class App extends Component {
                   <li>Quantity: {product.quantity} </li>
                   <br />
                   <li>Tags: {product.tags}</li>
+                  <br />
+                  <button onClick={() => this.deleteProduct(product._id)}>
+                      DELETE
+                    </button>
                 </ul>
                 <img src={product.image}width="300"></img>
               </div>
