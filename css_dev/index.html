@@ -3,110 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>E-mazon</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Document</title>
 </head>
 <body>
-    <div id="Landing">
-        <svg class="hero-area">
-            <rect id="hero-area" rx="0" ry="0" x="0" y="0" width="396" height="196">
-            </rect>
-        </svg>
-        <div id="hero_promotional_area">
-            <span>HERO<br/>(promotional area)</span>
-        </div>
-        <div id="Product_Component_4__1" class="Product_Component_4___1">
-            <svg class="product-area">
-                <rect id="product-area" rx="0" ry="0" x="0" y="0" width="396" height="380">
-                </rect>
-            </svg>
-            <div id="product-image">
-                <svg class="Product_Image">
-                    <rect id="Product_Image" rx="0" ry="0" x="0" y="0" width="200" height="200">
-                    </rect>
-                </svg>
-                <div id="PRODUCT_IMAGE">
-                    <span>PRODUCT<br/>IMAGE</span>
+    <div id="container">
+        <h1>CART RENDERS</h1>
+            <div class="subtotal">
+                <p>Subtotal (# of items): $0.00</p>
+            </div>
+            <button class="checkout-btn">Checkout Emazon Cart</button>
+            <hr />
+            <div id="products-in-cart">
+                <img src="https://media.gq-magazine.co.uk/photos/5dbc4d5a8da8f900083b9076/master/w_1000,c_limit/20191028-watch-guide-baume.jpg" width="110px" class="cart-product-img" alt=""/>
+                <div class="cart-product-details">
+                    <ul>
+                        <li class="product-name">Product Name</li>
+                        <li class="product-price">$99.99</li>
+                        <li class="product-in-stock">In Stock </li>
+                        <li class="product-style">Style: </li> 
+                        <li class="product-color">Color: </li>
+                    </ul>
                 </div>
+                <div class="items-in-cart"></div>
             </div>
-            <div id="product-description">
-                <span>Product Description</span><br><span style="font-style:normal;font-weight:normal;">Ut lectus vehicula aliquip delectus platea tempora hymenaeos. Vulputate earum montes curabitur nascetur nunc ante habitasse eaque dolor bibendum accumsan, nostrud, voluptatum lorem aut, dolorum veritatis! Dis interdum sapiente natoque nunc velit, placerat? Reprehenderit potenti nesciunt! Ridiculus pulvinar.</span>
-            </div>
-            <div id="product-price">
-                <span>$99.99</span>
-            </div>
-            <div id="product-name">
-                <span>Product Name</span>
-            </div>
-        </div>
-        <div id="phone-viewport">
-            <svg class="Rectangle_1">
-                <rect id="Rectangle_1" rx="0" ry="0" x="0" y="0" width="396" height="43">
-                </rect>
-            </svg>
-            <svg class="Rectangle_2">
-                <rect id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="396" height="23">
-                </rect>
-            </svg>
-        </div>
-        <div id="Header_Component_2__1" class="Header_Component_2___1">
-            <svg class="header">
-                <rect id="header" rx="0" ry="0" x="0" y="0" width="396" height="144">
-                </rect>
-            </svg>
-            <div id="search">
-                <svg class="Rectangle_4">
-                    <rect id="Rectangle_4" rx="7" ry="7" x="0" y="0" width="386" height="40">
-                    </rect>
-                </svg>
-            </div>
-            <div id="logo">
-                <svg class="Rectangle_5">
-                    <rect id="Rectangle_5" rx="0" ry="0" x="0" y="0" width="60" height="30">
-                    </rect>
-                </svg>
-                <div id="LOGO_">
-                    <span>LOGO</span>
-                </div>
-            </div>
-            <div id="search-icon">
-                <span></span>
-            </div>
-            <div id="cart-icon">
-                <span></span>
-            </div>
-            <div id="nav_bar">
-                <div id="nav_bar_0" class="">
-                    <div id="nav_link_1">
-                        <span>nav link 1</span>
-                    </div>
-                </div>
-                <div id="nav_bar_1" class="">
-                    <div id="nav_link_2">
-                        <span>nav link 2</span>
-                    </div>
-                </div>
-                <div id="nav_bar_2" class="">
-                    <div id="nav_link_3">
-                        <span>nav link 3</span>
-                    </div>
-                </div>
-                <div id="nav_bar_3" class="">
-                    <div id="nav_link_4">
-                        <span>nav link 4</span>
-                    </div>
+            <div class="items-in-cart">
+                <div class="cart-update">
+                    <form action="" id="cart-qty">
+                        <button class="decrease-qty-btn">Delete or Subtract Item</button> 
+                        <input id="quantity" name="quantity" type="text" class="qty-in-cart"/>
+                        <button class="increase-qty-btn">Add Item</button>
+                        <button class="delete-item-btn">Delete</button>
+                        <button class="save-item-btn">Save for Later</button>
+                    </form>
                 </div>
             </div>
         </div>
-        <div id="Group_5">
-            <svg class="product-image_bf">
-                <rect id="product-image_bf" rx="7" ry="7" x="0" y="0" width="125" height="30">
-                </rect>
-            </svg>
-            <div id="Buy">
-                <span>Buy</span>
-            </div>
-        </div>
-    </div>
 </body>
 </html>
