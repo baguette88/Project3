@@ -79,44 +79,37 @@ export default class App extends Component {
       <div>
         <Header></Header>
         <NewForm handleAddProduct={this.handleAddProduct} />
-        <table>
-          <tbody>
-            {this.state.products.map((product) => {
-              return (
-                <tr>
-                  <td
-                    key={product._id}
-                    onDoubleClick={() => this.toggleinStock(product)}
-                    className={product.inStock ? "In Stock" : null}
-                  >
-                    <td>
-                      {" "}
-                      <b> Product: </b>
-                      {product.name}{" "}
-                    </td>{" "}
-                    <br />
-                    <td>
-                      Category: {product.category} | Sub-Category:{" "}
-                      {product.subcategory}{" "}
-                    </td>
-                    <br />
-                    <td>Description:{product.description}</td>
-                    {/* <td>Image:{product.image}</td> */}
-                    <br />
-                    <td> Price:{product.price} </td>
-                    {/* <td> In{product.inStock} </td> */}
-                    <button>
-                      {" "}
-                      <td onClick={() => this.deleteProduct(product._id)}>
-                        DELETE
-                      </td>{" "}
-                    </button>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+
+        {/* Displaying the product info */}
+        <div className="showDetail">
+          {this.state.products.map((product) => {
+            return (
+              <ul key={product._id}>
+                <li><h3>Product: {product.name}</h3></li>
+                <li>Price: ${product.price} </li>
+                <br />
+                <li>
+                  Image Link: {product.image}
+                  <img src="{product.image}"></img>
+                  </li>
+                <br />
+                <li>Category: {product.category}</li>
+                <br />
+                <li>Subcategory: {product.subcategory}</li>
+                <br />
+                <li>Brand: {product.brand} </li>
+                <br />
+                <li> Description: {product.description}</li>
+                <br />
+                <li>Quantity: {product.quantity} </li>
+                <br />
+                <li>Tags: {product.tags}</li>
+              </ul>
+            )
+          })}
+        </div>
+
+
         <ShoppingPage></ShoppingPage>
         <ProductGrid />
         <ProductCart />
