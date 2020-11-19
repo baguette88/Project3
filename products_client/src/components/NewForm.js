@@ -17,10 +17,18 @@ export default class NewForm extends Component {
   }
 
   handleSubmit(event) {
+    // const pkg = {}
     event.preventDefault();
     fetch(baseURL + "/products", {
       method: "POST",
-      body: JSON.stringify({ name: this.state.name }),
+      body: JSON.stringify({
+        name: this.state.name,
+        category: this.state.category,
+        price: this.state.price,
+        description: this.state.description,
+        subcategory: this.state.subcategory,
+        image: this.state.image,
+      }),
       headers: {
         "Content-Type": "application/json",
       },
@@ -66,6 +74,36 @@ export default class NewForm extends Component {
           onChange={this.handleChange}
           value={this.state.description}
           placeHolder="add a Description"
+        />{" "}
+        <br />
+        <label htmlFor="name">Image</label>
+        <input
+          type="text"
+          id="image"
+          name="image"
+          onChange={this.handleChange}
+          value={this.state.image}
+          placeHolder="add an image"
+        />{" "}
+        <br />
+        <label htmlFor="name">Category</label>
+        <input
+          type="text"
+          id="category"
+          name="category"
+          onChange={this.handleChange}
+          value={this.state.category}
+          placeHolder="add a Category"
+        />{" "}
+        <br />
+        <label htmlFor="name">Sub-Category</label>
+        <input
+          type="text"
+          id="subcategory"
+          name="subcategory"
+          onChange={this.handleChange}
+          value={this.state.subcategory}
+          placeHolder="add a Sub-Category"
         />{" "}
         <br />
         <input type="submit" value="Add Product" />
