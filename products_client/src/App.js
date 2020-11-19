@@ -81,30 +81,30 @@ export default class App extends Component {
         <NewForm handleAddProduct={this.handleAddProduct} />
 
         {/* Displaying the product info */}
-        <div className="showDetail">
+        <div className="productShow">
           {this.state.products.map((product) => {
             return (
-              <ul key={product._id}>
-                <li><h3>Product: {product.name}</h3></li>
-                <li>Price: ${product.price} </li>
-                <br />
-                <li>
-                  Image Link: {product.image}
-                  <img src="{product.image}"></img>
-                  </li>
-                <br />
-                <li>Category: {product.category}</li>
-                <br />
-                <li>Subcategory: {product.subcategory}</li>
-                <br />
-                <li>Brand: {product.brand} </li>
-                <br />
-                <li> Description: {product.description}</li>
-                <br />
-                <li>Quantity: {product.quantity} </li>
-                <br />
-                <li>Tags: {product.tags}</li>
-              </ul>
+              <div>
+                <ul key={product._id}>
+                  <li><h3>Product: {product.name}</h3></li>
+                  <li>Price: ${product.price} </li>
+                  <br />
+                  <li>Image Link: {product.image}</li>
+                  <br />
+                  <li>Category: {product.category}</li>
+                  <br />
+                  <li>Subcategory: {product.subcategory}</li>
+                  <br />
+                  <li>Brand: {product.brand} </li>
+                  <br />
+                  <li> Description: {product.description}</li>
+                  <br />
+                  <li>Quantity: {product.quantity} </li>
+                  <br />
+                  <li>Tags: {product.tags}</li>
+                </ul>
+                <img src={product.image}width="300"></img>
+              </div>
             )
           })}
         </div>
