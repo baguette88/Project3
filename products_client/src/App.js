@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import NewForm from "./components/NewForm.js";
-//import ProductBox from "./components/ProductBox.js";
-import SearchBar from "./components/SearchBar.js";
-import NavBar from "./components/NavBar.js";
-import Banner from "./components/Banner.js";
-import ScreenTop from "./components/ScreenTop.js";
-import ShoppingPage from "./components/ShoppingPage"
+import Header from "./components/Header.js";
+import ShoppingPage from "./components/ShoppingPage";
 import "./index.css";
-
+import ProductGrid from "./components/ProductGrid.js";
+import ProductCart from "./components/ProductCart.js";
+console.log("App");
 const baseURL = "http://localhost:3003";
-
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -80,41 +77,50 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <ScreenTop></ScreenTop>
-        <Banner></Banner>
-        <SearchBar></SearchBar>
-        <NavBar></NavBar>
+        <Header></Header>
         <NewForm handleAddProduct={this.handleAddProduct} />
-        <table>
-          <tbody>
-            {this.state.products.map((product) => {
-              return (
-                <tr>
-                  <td
-                    key={product._id}
-                    onDoubleClick={() => this.toggleinStock(product)}
-                    className={product.inStock ? "In Stock" : null}
-                  >
-                    {" "}
-                    {product.name} |{product.category}|{product.subcategory}
-                    <br /> |{product.description} <br />
-                  </td>
-                  <td> {product.price} </td>
-                  <td> {product.inStock} </td>
-                  <button>
-                    {" "}
-                    <td onClick={() => this.deleteProduct(product._id)}>
-                      DELETE
-                    </td>{" "}
-                  </button>
-                </tr>
 
-                // <NavBar>NavBar</NavBar>
-              );
-            })}
-          </tbody>
-        </table>
-        {/* <ShoppingPage></ShoppingPage> */}
+        {/* Displaying the product info */}
+        <div className="inventory-show">
+          {this.state.products.map((product) => {
+            return (
+              <div className="product-show">
+                <ul key={product._id}>
+                  <li>
+                    <h3>Product: {product.name}</h3>
+                  </li>
+                  <li>Price: ${product.price} </li>
+                  <br />
+                  <li>Image Link: {product.image}</li>
+                  <br />
+                  <li>Category: {product.category}</li>
+                  <br />
+                  <li>Subcategory: {product.subcategory}</li>
+                  <br />
+                  <li>Brand: {product.brand} </li>
+                  <br />
+                  <li> Description: {product.description}</li>
+                  <br />
+                  <li>Quantity: {product.quantity} </li>
+                  <br />
+                  <li>Tags: {product.tags}</li>
+                  <br />
+                  {/* <button onClick={() => this.deleteProduct(product._id)}>
+                      SHOW
+                    </button> */}
+                  <button onClick={() => this.deleteProduct(product._id)}>
+                    DELETE
+                  </button>
+                </ul>
+                <img src={product.image} width="300"></img>
+              </div>
+            );
+          })}
+        </div>
+
+        <ShoppingPage></ShoppingPage>
+        <ProductGrid />
+        <ProductCart />
       </div>
     );
   }

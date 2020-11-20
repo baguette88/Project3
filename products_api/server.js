@@ -23,7 +23,7 @@ const corsOptions = {
   },
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 // mongoose connection logic
 mongoose.connection.on("error", (err) =>

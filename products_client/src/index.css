@@ -6,7 +6,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.tbody {
+  border: 1px solid black;
+}
 
+.logo {
+  background-color: rgb(1, 7, 65);
+  color: rgb(255, 255, 255);
+}
+.login-btn {
+  background-color: rgb(1, 7, 65);
+  color: rgb(255, 255, 255);
+}
+.navBar {
+  background-color: rgb(1, 7, 65);
+  color: rgb(255, 255, 255);
+  height: 40px;
+  float: top;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -18,11 +35,6 @@ code {
 
 li {
   display: inline;
-}
-.NavBar {
-  background-color: rgb(1, 7, 65);
-  color: rgb(255, 255, 255);
-  border: 1px solid black;
 }
 
 .SearchBar {
@@ -52,4 +64,13 @@ input {
   color: rgb(255, 255, 255);
   border: 1px solid black;
   height: 10px;
+}
+.input {
+  background-color: grey;
+}
+
+.fa-shopping-cart {
+  float: right;
+  font-size: 30px;
+  padding: 10px;
 }
