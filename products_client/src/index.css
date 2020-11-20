@@ -68,3 +68,9 @@ input {
 .input {
   background-color: grey;
 }
+
+.fa-shopping-cart {
+  float: right;
+  font-size: 30px;
+  padding: 10px;
+}
