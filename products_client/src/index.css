@@ -2,6 +2,9 @@ h1 {
   color: deeppink;
 }
 
+.list {
+  color: deeppink;
+}
 
 /* body {
   margin: 0;
@@ -22,14 +25,14 @@ h1 {
 .login-btn {
   background-color: rgb(1, 7, 65);
   color: rgb(255, 255, 255);
-}
-.navBar {
+}*/
+/* .navBar {
   background-color: rgb(1, 7, 65);
   color: rgb(255, 255, 255);
   height: 40px;
   float: top;
-}
-code {
+} */
+/*  code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
