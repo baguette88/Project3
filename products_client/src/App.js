@@ -5,7 +5,6 @@ import ShoppingPage from "./components/ShoppingPage";
 import "./index.css";
 import ProductGrid from "./components/ProductGrid.js";
 import ProductCart from "./components/ProductCart.js";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 console.log("App");
 const baseURL = "http://localhost:3003";
 export default class App extends Component {
@@ -78,18 +77,18 @@ export default class App extends Component {
       });
   }
 
-  deleteProduct(id) {
-    fetch(baseURL + "/products/" + id, {
-      method: "DELETE",
-    }).then((response) => {
-      const findIndex = this.state.products.findIndex(
-        (product) => product._id === id
-      );
-      const copyProducts = [...this.state.products];
-      copyProducts.splice(findIndex, 1);
-      this.setState({ products: copyProducts });
-    });
-  }
+  // deleteProduct(id) {
+  //   fetch(baseURL + "/products/" + id, {
+  //     method: "DELETE",
+  //   }).then((response) => {
+  //     const findIndex = this.state.products.findIndex(
+  //       (product) => product._id === id
+  //     );
+  //     const copyProducts = [...this.state.products];
+  //     copyProducts.splice(findIndex, 1);
+  //     this.setState({ products: copyProducts });
+  //   });
+  // }
 
   render() {
     return (
