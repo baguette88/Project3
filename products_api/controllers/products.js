@@ -61,13 +61,13 @@ products.post("/", async (req, res) => {
 
 // show///
 //////////
-// products.get("/:id", (req, res) => {
-//   Product.findById(req.params.id, (err, foundProduct) => {
-//     res.render("show.ejs", {
-//       product: foundProduct,
-//     });
-//   });
-// });
+products.get("/:id", (req, res) => {
+  Product.findById(req.params.id, (err, foundProduct) => {
+    res.render("show.ejs", {
+      product: foundProduct,
+    });
+  });
+});
 
 // delete
 products.delete("/:id", (req, res) => {
