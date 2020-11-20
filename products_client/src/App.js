@@ -86,7 +86,9 @@ export default class App extends Component {
             return (
               <div>
                 <ul key={product._id}>
-                  <li><h3>Product: {product.name}</h3></li>
+                  <li>
+                    <h3>Product: {product.name}</h3>
+                  </li>
                   <li>Price: ${product.price} </li>
                   <br />
                   <li>Image Link: {product.image}</li>
@@ -103,16 +105,18 @@ export default class App extends Component {
                   <br />
                   <li>Tags: {product.tags}</li>
                   <br />
+                  {/* <button onClick={() => this.deleteProduct(product._id)}>
+                      SHOW
+                    </button> */}
                   <button onClick={() => this.deleteProduct(product._id)}>
-                      DELETE
-                    </button>
+                    DELETE
+                  </button>
                 </ul>
-                <img src={product.image}width="300"></img>
+                <img src={product.image} width="300"></img>
               </div>
-            )
+            );
           })}
         </div>
-
 
         <ShoppingPage></ShoppingPage>
         <ProductGrid />
