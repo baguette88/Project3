@@ -77,18 +77,18 @@ export default class App extends Component {
       });
   }
 
-  deleteProduct(id) {
-    fetch(baseURL + "/products/" + id, {
-      method: "DELETE",
-    }).then((response) => {
-      const findIndex = this.state.products.findIndex(
-        (product) => product._id === id
-      );
-      const copyProducts = [...this.state.products];
-      copyProducts.splice(findIndex, 1);
-      this.setState({ products: copyProducts });
-    });
-  }
+  // deleteProduct(id) {
+  //   fetch(baseURL + "/products/" + id, {
+  //     method: "DELETE",
+  //   }).then((response) => {
+  //     const findIndex = this.state.products.findIndex(
+  //       (product) => product._id === id
+  //     );
+  //     const copyProducts = [...this.state.products];
+  //     copyProducts.splice(findIndex, 1);
+  //     this.setState({ products: copyProducts });
+  //   });
+  // }
 
   render() {
     return (
