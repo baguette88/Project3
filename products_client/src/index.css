@@ -10,19 +10,6 @@ body {
   border: 1px solid black;
 }
 
-.navbarTop {
-  background-image: linear-gradient(blue, darkblue);
-  padding-top: -20px;
-  overflow: auto;
-  background-color: black;
-  color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  border: 2px solid black;
-  z-index: 10;
-}
-
 .logo {
   background-color: rgb(1, 7, 65);
   color: rgb(255, 255, 255);
@@ -80,4 +67,10 @@ input {
 }
 .input {
   background-color: grey;
+}
+
+.fa-shopping-cart {
+  float: right;
+  font-size: 30px;
+  padding: 10px;
 }
