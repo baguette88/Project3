@@ -70,8 +70,11 @@ input {
   border: 1px solid black;
   height: 10px;
 }
-.input {
-  background-color: grey;
+
+
+.dark-input {
+  background-color: #3CBC8D;
+ color: white;
 }
 
 .fa-shopping-cart {
