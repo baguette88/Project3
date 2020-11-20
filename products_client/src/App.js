@@ -18,6 +18,7 @@ export default class App extends Component {
     this.handleAddProduct = this.handleAddProduct.bind(this);
     this.toggleinStock = this.toggleinStock.bind(this);
     this.deleteProduct = this.deleteProduct.bind(this);
+    this.showProduct = this.showProduct.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +41,21 @@ export default class App extends Component {
           products: parsedData,
         });
       });
+  }
+
+    // trying out a show method //
+    showProduct(id) {
+    fetch(baseURL + "/products/" + id, {
+      method: "PUT",
+    }).then((response) => {
+      const copyProducts = [...this.state.products];
+      const findIndex = this.state.products.findIndex(
+        (product) => product._id === id
+      );
+      this.setState({
+        product: copyProducts[findIndex]
+      })
+    })
   }
 
   toggleinStock(product) {
@@ -81,12 +97,14 @@ export default class App extends Component {
         <NewForm handleAddProduct={this.handleAddProduct} />
 
         {/* Displaying the product info */}
-        <div className="inventory-show">
+        <div className="productShow">
           {this.state.products.map((product) => {
             return (
-              <div className="product-show">
+              <div >
                 <ul key={product._id}>
-                  <li><h3>Product: {product.name}</h3></li>
+                  <li>
+                    <h3>Product: {product.name}</h3>
+                  </li>
                   <li>Price: ${product.price} </li>
                   <br />
                   <li>Image Link: {product.image}</li>
@@ -103,16 +121,18 @@ export default class App extends Component {
                   <br />
                   <li>Tags: {product.tags}</li>
                   <br />
+                  <button onClick={() => this.editProduct(product._id)}>EDIT</button>
                   <button onClick={() => this.deleteProduct(product._id)}>
-                      DELETE
-                    </button>
+                    DELETE
+                  </button>
                 </ul>
-                <img src={product.image}width="300"></img>
+                <div>
+                  <img src={product.image} width="300" alt="" onClick={() => this.showProduct(product._id)}></img>
+                </div>
               </div>
-            )
+            );
           })}
         </div>
-
 
         <ShoppingPage></ShoppingPage>
         <ProductGrid />
