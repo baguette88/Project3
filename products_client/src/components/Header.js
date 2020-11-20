@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import '../index.css'
 
 export default class Header extends Component {
   render() {
@@ -18,7 +19,7 @@ export default class Header extends Component {
             <i type="submit" className="fa fa-search"></i>
           </form>
         </div>
-        <div className="navBar">
+        <div className="navbar">
           {" "}
           <ul>
             {" "}
