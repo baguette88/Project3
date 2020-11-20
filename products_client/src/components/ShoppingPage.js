@@ -7,7 +7,7 @@ import React, { Component } from 'react'
 export default class ShoppingPage extends Component {
     render() {
         return (
-            <div className="ShoppingPage">
+            <div className="shoppingPage">
                 <h1>--Shopping Page--</h1>
                 {/* Box for product details text */}
                 <div className="">
