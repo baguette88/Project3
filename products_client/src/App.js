@@ -5,6 +5,7 @@ import ShoppingPage from "./components/ShoppingPage";
 import "./index.css";
 import ProductGrid from "./components/ProductGrid.js";
 import ProductCart from "./components/ProductCart.js";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 console.log("App");
 const baseURL = "http://localhost:3003";
 export default class App extends Component {
