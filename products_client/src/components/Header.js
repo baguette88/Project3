@@ -9,12 +9,13 @@ export default class Header extends Component {
           {" "}
           E-Mazon <br />
           <span ClassName="logo">Logo</span>
+          <i className="fa fa-shopping-cart"></i>
         </div>
         <div className="SearchBar">
           <form onSubmit={this.handleSubmit}>
             <input type="search" name="search" placeholder="Search.."></input>
-            <i class="fas fa-shopping-cart"></i>
             <input type="submit" value="Search" />
+            <i type="submit" className="fa fa-search"></i>
           </form>
         </div>
         <div className="navBar">
