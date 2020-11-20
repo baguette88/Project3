@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 
 export default class ProductCart extends Component {
     render() {
         return (
             <div>
+            <Container>
             <h1>CART RENDERS</h1>
                 <div className="subtotal">
                     <p>Subtotal (# of items): $0.00</p>
@@ -28,12 +31,13 @@ export default class ProductCart extends Component {
                         <form action="" id="cart-qty">
                             <button class="decrease-qty-btn">Delete or Subtract Item</button> {/* On Amazon this button changes to a minus sign if qty > 1 */}
                             <input id="quantity" name="quantity" type="text" className="qty-in-cart"/>
-                            <button className="increase-qty-btn">Add Item</button>
-                            <button className="delete-item-btn">Delete</button>
+                            <Button className="increase-qty-btn">Add Item</Button>
+                            <Button className="delete-item-btn">Delete</Button>
                             <button className="save-item-btn">Save for Later</button>
                         </form>
                     </div>
                 </div>
+                </Container>
             </div>
         )
     }
