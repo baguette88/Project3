@@ -1,23 +1,25 @@
 import React, { Component } from "react";
+// import '../index.css'
 
 export default class Header extends Component {
   render() {
     return (
-      <div>
+      <div className="navbarTop">
         <div className="ScreenTop"> </div>
         <div className="Banner">
           {" "}
           E-Mazon <br />
           <span ClassName="logo">Logo</span>
+          <i className="fa fa-shopping-cart"></i>
         </div>
         <div className="SearchBar">
           <form onSubmit={this.handleSubmit}>
-            <input type="text" name="search" placeholder="Search.."></input>
-            <i class="fas fa-shopping-cart"></i>
+            <input type="search" name="search" placeholder="Search.."></input>
             <input type="submit" value="Search" />
+            <i type="submit" className="fa fa-search"></i>
           </form>
         </div>
-        <div className="navBar">
+        <div className="navbar">
           {" "}
           <ul>
             {" "}

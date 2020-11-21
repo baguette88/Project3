@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { Component } from "react";
 
 export default class Login extends Component {
@@ -21,3 +23,4 @@ export default class Login extends Component {
 }
 
 >>>>>>> a2b16384f81a8d2f94b7f9f306b7adb04c7972fd
+>>>>>>> dd9e2613126e1e3dea73f2835f0190c3701e0c34

@@ -18,6 +18,7 @@ export default class App extends Component {
     this.handleAddProduct = this.handleAddProduct.bind(this);
     this.toggleinStock = this.toggleinStock.bind(this);
     this.deleteProduct = this.deleteProduct.bind(this);
+    this.showProduct = this.showProduct.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +41,21 @@ export default class App extends Component {
           products: parsedData,
         });
       });
+  }
+
+    // trying out a show method //
+    showProduct(id) {
+    fetch(baseURL + "/products/" + id, {
+      method: "PUT",
+    }).then((response) => {
+      const copyProducts = [...this.state.products];
+      const findIndex = this.state.products.findIndex(
+        (product) => product._id === id
+      );
+      this.setState({
+        product: copyProducts[findIndex]
+      })
+    })
   }
 
   toggleinStock(product) {
@@ -79,33 +95,45 @@ export default class App extends Component {
       <div>
         <Header></Header>
         <NewForm handleAddProduct={this.handleAddProduct} />
-        <table>
-          <tbody>
-            {this.state.products.map((product) => {
-              return (
-                <tr>
-                  <td
-                    key={product._id}
-                    onDoubleClick={() => this.toggleinStock(product)}
-                    className={product.inStock ? "In Stock" : null}
-                  >
-                    {" "}
-                    {product.name} |{product.category}|{product.subcategory}
-                    <br /> |{product.description} <br />
-                  </td>
-                  <td> {product.price} </td>
-                  <td> {product.inStock} </td>
-                  <button>
-                    {" "}
-                    <td onClick={() => this.deleteProduct(product._id)}>
-                      DELETE
-                    </td>{" "}
+
+        {/* Displaying the product info */}
+        <div className="productShow">
+          {this.state.products.map((product) => {
+            return (
+              <div >
+                <ul key={product._id}>
+                  <li>
+                    <h3>Product: {product.name}</h3>
+                  </li>
+                  <li>Price: ${product.price} </li>
+                  <br />
+                  <li>Image Link: {product.image}</li>
+                  <br />
+                  <li>Category: {product.category}</li>
+                  <br />
+                  <li>Subcategory: {product.subcategory}</li>
+                  <br />
+                  <li>Brand: {product.brand} </li>
+                  <br />
+                  <li> Description: {product.description}</li>
+                  <br />
+                  <li>Quantity: {product.quantity} </li>
+                  <br />
+                  <li>Tags: {product.tags}</li>
+                  <br />
+                  <button onClick={() => this.editProduct(product._id)}>EDIT</button>
+                  <button onClick={() => this.deleteProduct(product._id)}>
+                    DELETE
                   </button>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+                </ul>
+                <div>
+                  <img src={product.image} width="300" alt="" onClick={() => this.showProduct(product._id)}></img>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
         <ShoppingPage></ShoppingPage>
         <ProductGrid />
         <ProductCart />
