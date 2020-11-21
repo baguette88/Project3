@@ -1,5 +1,22 @@
+* {
+  font-size: 14px;
+}
+
 h1 {
   color: deeppink;
+}
+
+.test {
+  width: 100%;
+
+}
+
+.item_hr {
+  width: 50%
+}
+
+.product_name {
+  font-weight: 700;
 }
 
 
