@@ -23,7 +23,7 @@ export default class ProductCart extends Component {
                        </Col>
                         {/* <div className="cart-product-details"> */}
                             <Col>
-                                <ListGroup className="test">
+                                <ListGroup className="product-cart-info">
                                     <ListGroup.Item className="product_name">Baume 10601</ListGroup.Item>
                                     <ListGroup.Item className="product_price">$99.99</ListGroup.Item>
                                     <ListGroup.Item className="product_in_stock">In Stock</ListGroup.Item>

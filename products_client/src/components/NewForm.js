@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import FormControl from 'react-bootstrap';
 
 const baseURL = "http://localhost:3003";
 
@@ -65,112 +66,146 @@ export default class NewForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          onChange={this.handleChange}
-          value={this.state.name}
-          placeholder="add Product name"
-        />{" "}
-        <br />
-        <label htmlFor="price">Price</label>
-        <input
-          type="text"
-          id="price"
-          name="price"
-          onChange={this.handleChange}
-          value={this.state.price}
-          placeholder="add a Price"
-        />{" "}
-        <br />
-        <label htmlFor="image">Image Link</label>
-        <input
-          type="text"
-          id="image"
-          name="image"
-          onChange={this.handleChange}
-          value={this.state.image}
-          placeholder="add an Image Link"
-        />{" "}
-        <br />
-        <label htmlFor="category">Category</label>
-        <input
-          type="text"
-          id="category"
-          name="category"
-          onChange={this.handleChange}
-          value={this.state.category}
-          placeholder="add Product's category"
-        />{" "}
-        <br />
-        <label htmlFor="subcategory">Subcategory</label>
-        <input
-          type="text"
-          id="subcategory"
-          name="subcategory"
-          onChange={this.handleChange}
-          value={this.state.subcategory}
-          placeholder="add Product's subcategory"
-        />{" "}
-        <br />
-        <label htmlFor="brand">Brand</label>
-        <input
-          type="text"
-          id="brand"
-          name="brand"
-          onChange={this.handleChange}
-          value={this.state.brand}
-          placeholder="add Product's brand"
-        />{" "}
-        <br />
-        <label htmlFor="description">Description</label>
-        <input
-          type="text"
-          id="description"
-          name="description"
-          onChange={this.handleChange}
-          value={this.state.description}
-          placeholder="add a Description"
-        />{" "}
-        <br />
+      <form onSubmit={this.handleSubmit} className="container">
+          <div className="form-group row">
+            <label htmlFor="name" className="col-sm-2 col-form-label">Name</label>
+            <div className="col-sm-10">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                onChange={this.handleChange}
+                value={this.state.name}
+                placeholder="add Product name"
+              />
+            </div>
+          </div>
+        <div className="form-group row">
+          <label htmlFor="price" className="col-sm-2 col-form-label">Price</label>
+          <div className="col-sm-10">
+            <input
+              type="text"
+              id="price"
+              name="price"
+              onChange={this.handleChange}
+              value={this.state.price}
+              placeholder="add a Price"
+            />
+          </div>
+        </div>
+        <div className="form-group row">
+          <label htmlFor="image" className="col-sm-2 col-form-label">Image Link</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              id="image"
+              name="image"
+              onChange={this.handleChange}
+              value={this.state.image}
+              placeholder="add an Image Link"
+            />
+          </div>
+        </div>
+       <div className="form-group row">
+          <label htmlFor="category" className="col-sm-2 col-form-label">Category</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              id="category"
+              name="category"
+              onChange={this.handleChange}
+              value={this.state.category}
+              placeholder="add Product's category"
+            />
+          </div>
+       </div>
+        <div className="form-group row">
+          <label htmlFor="subcategory" className="col-sm-2 col-form-label">Subcategory</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              id="subcategory"
+              name="subcategory"
+              onChange={this.handleChange}
+              value={this.state.subcategory}
+              placeholder="add Product's subcategory"
+            />
+          </div>
+        </div>
+        <div className="form-group row">
+          <label htmlFor="brand" className="col-sm-2 col-form-label">Brand</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              id="brand"
+              name="brand"
+              onChange={this.handleChange}
+              value={this.state.brand}
+              placeholder="add Product's brand"
+            />
+          </div>
+        </div>
+        <div className="form-group row">
+          <label htmlFor="description" className="col-sm-2 col-form-label">Description</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              id="description"
+              name="description"
+              onChange={this.handleChange}
+              value={this.state.description}
+              placeholder="add a Description"
+            />
+          </div>
+        </div>
         {/* Will need to change into a checkbox */}
-        <label htmlFor="inStock">Is this Product in Stock?</label>
-        <input
-          type="text"
-          id="inStock"
-          name="inStock"
-          onChange={this.handleChange}
-          value={this.state.inStock}
-          placeholder="True/False"
-        />{" "}
-        <br />
+        <div className="form-group row">
+          <label htmlFor="inStock" className="col-sm-2 col-form-label">Is this Product in Stock?</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              id="inStock"
+              name="inStock"
+              onChange={this.handleChange}
+              value={this.state.inStock}
+              placeholder="True/False"
+            />
+          </div>
+        </div>
         {/* Will need to set minimum to go no lower than 0 */}
-        <label htmlFor="quantity">Quantity</label>
-        <input
-          type="text"
-          id="quantity"
-          name="quantity"
-          onChange={this.handleChange}
-          value={this.state.quantity}
-          placeholder="---"
-        />{" "}
-        <br />
+        <div className="form-group row">
+          <label htmlFor="quantity" className="col-sm-2 col-form-label">Quantity</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              id="quantity"
+              name="quantity"
+              onChange={this.handleChange}
+              value={this.state.quantity}
+              placeholder="---"
+            />
+          </div>
+        </div>
+
         {/* Should consider changing tags in schema type: Array; This may then cause this to need a different input type */}
-        <label htmlFor="tags">Add tags</label>
-        <input
-          type="text"
-          id="tags"
-          name="tags"
-          onChange={this.handleChange}
-          value={this.state.tags}
-          placeholder="Add tags when searching"
-        />{" "}
-        <br />
+        <div className="form-group row">
+          <label htmlFor="tags" className="col-sm-2 col-form-label">Add tags</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              id="tags"
+              name="tags"
+              onChange={this.handleChange}
+              value={this.state.tags}
+              placeholder="Add tags when searching"
+            />
+          </div>
+ 
         
-        <input type="submit" value="Add Product" />
+        <div className="submit-btn">
+          <input type="submit" value="Add Product" className="btn-primary" />
+        </div>
+        </div>
       </form>
     );
   }
